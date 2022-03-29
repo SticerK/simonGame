@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="circle">
+        <div class="red" ref="red" v-on:click="clickRed">
+          <audio ref="audio1" src="sound/sound-1.mp3">
+            
+          </audio>
+        </div>
+        <div class="green" ref="green" v-on:click="clickGreen">
+          <audio ref="audio2" src="sound/sound-2.mp3">
+           
+          </audio>
+        </div>
+        <div class="blue" ref="blue" v-on:click="clickBlue">
+          <audio ref="audio3" src="sound/sound-3.mp3">
+           
+          </audio>
+        </div>
+        <div class="yellow" ref="yellow" v-on:click="clickYellow">
+          <audio ref="audio4" src="sound/sound-4.mp3">
+            
+          </audio>
+        </div>
+      </div>
+      <div class="descr">
+        <div class="round">Round:{{ round }}</div>
+        <button class="buttonStart" v-on:click="start">Start</button>
+        <p class="opt">Options:</p>
+        <div class="opt__item">
+          <input type="radio" name="dif" @change="easy"><label for="">Easy</label>
+        </div>
+        <div class="opt__item">
+          <input type="radio" name="dif" checked @change="medium"><label for="">Medium</label>
+        </div>
+        <div class="opt__item">
+          <input type="radio" name="dif" @change="hard"><label for="">HARDCORE</label>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
